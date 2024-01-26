@@ -1,0 +1,109 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,500;1,600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+ /* background-color:#040707; */
+
+}
+body{
+    margin: 0;
+    background-color: beige;
+}
+
+.form{
+   
+     
+} 
+
+.gencontainer{
+   
+    /* width: 500px;   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.title{
+    width: 400px;
+}
+
+.random-gen{
+    
+     max-width: 700px; 
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+}
+
+.submitbtn button{
+    width: 300px;
+    padding: 20px;
+    border: none;
+    box-shadow: inset;
+    background-color: green;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700px;
+    color:aliceblue;
+    margin-top: 20px;
+}
+
+.inputbox{
+
+    width: 350px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0;
+  
+
+}
+
+.inputbox1{
+    width: 400px;
+
+}
+
+.imgiconcopy{
+  
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    
+} 
+
+.spanimg-input{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: aliceblue;
+
+}
+
+h1{
+    font-size: 60px;
+    margin-bottom: 0;
+    font-weight: normal;
+
+}
+
+
+h3{
+    font-size: 30px;
+    /* text-decoration: underline; */
+    margin-top: 0;
+    font-weight: normal;
+    border-bottom: 3px solid #019f55 ;
+    width: 300px;
+}

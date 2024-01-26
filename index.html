@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="index.css" />
+    <link rel="stylesheet" href="index.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="random-gen">
+        <div class="title">
+      <h1>Generate</h1>
+      <h3>Random Password</h3>
+      </div>
+      
+      <div class="gencontainer"> 
+      <!-- <form class="form" id="form2"> -->
+
+        <div class="inputbox1">
+          <span class="spanimg-input"
+            ><input class="inputbox" id="inputbox" type="text" placeholder="Xgzw[{HT04t3" />
+            <img class="imgiconcopy" src="./images/copy.png" alt="copy icon" onclick="copyPassword()" />
+          </span>
+        </div>
+
+        <div class="submitbtn">
+          <button onclick="createPassword()" type="submit" value="Generate Password"> Generate Password </button>
+        </div>
+    </div>
+      <!-- </form> -->
+    </div>
+    <script>
+        const passwordBox = document.getElementById('inputbox');
+        const length = 16;
+
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        const  numbers = "0123456789";
+        const symbols  = "!@#$%^&*()_[]+{}:<>\|";
+
+
+        const allChars = upperCase + lowerCase + numbers + symbols;
+        console.log(allChars)
+
+        function createPassword(){
+
+            let password = "";
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += numbers[Math.floor(Math.random() * numbers.length)];
+            password += symbols[Math.floor(Math.random() * symbols.length)];
+
+            while(length > password.length) {
+                password += allChars[Math.floor(Math.random() * allChars.length)];
+                console.log(password)
+
+            }
+
+            passwordBox.value = password;
+
+        }
+
+        function copyPassword() {
+            passwordBox.select();
+            document.execCommand("copy")
+        }
+
+
+
+
+    </script>
+  </body>
+</html>
